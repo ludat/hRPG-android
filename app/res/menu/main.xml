@@ -4,12 +4,6 @@
     tools:context="com.ludat.hrpg.MainActivity" >
 
     <item
-        android:id="@+id/action_search"
-        android:orderInCategory="100"
-        android:title="@string/action_search"
-        app:showAsAction="always" />
-
-    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"

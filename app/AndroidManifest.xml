@@ -7,6 +7,8 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -16,21 +18,21 @@
         <activity
             android:name="com.ludat.hrpg.MainActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.ludat.hrpg.EntryActivity"
+            android:label="@string/title_activity_entry"
+            android:theme="@style/EntryTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.ludat.hrpg.LoginActivity"
-            android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
-        <activity
-            android:name="com.ludat.hrpg.EntryActivity"
-            android:label="@string/title_activity_entry" >
-        </activity>
+
+        <service
+            android:name="com.ludat.hrpg.api.ApiService">
+        </service>
     </application>
 
 </manifest>
