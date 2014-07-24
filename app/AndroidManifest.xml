@@ -7,8 +7,9 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="19" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -31,7 +32,11 @@
         </activity>
 
         <service
-            android:name="com.ludat.hrpg.api.ApiService">
+            android:name="com.ludat.hrpg.api.ApiService"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.ludat.hrpg.api.ApiService" />
+            </intent-filter>
         </service>
     </application>
 
